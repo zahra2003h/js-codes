@@ -11,6 +11,6 @@ function addText() {
         tasks.push(todoField.value);
     }
 
-   var printText = document.getElementById("pTag").innerHTML= tasks;
-}
+    document.getElementById("pTag").innerHTML= tasks.join("<br>");
 
+}
