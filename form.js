@@ -15,4 +15,6 @@ function addText() {
     let li = document.createElement("li");
     li.innerHTML = todoField.value;
     ulElement.appendChild(li);
+
+    todoField.value=null;
 }
