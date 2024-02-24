@@ -1,16 +1,14 @@
-const todoField = document.getElementById("todo-field");
+const input = document.getElementById("todo-input");
 
-const addButton = document.getElementById("add-button");
+const button = document.getElementById("todo-button");
 
 var tasks = [];
 
-addButton.addEventListener('click',addText);
-
-function addText() {
-    if (todoField.value == "","  ") {
-        tasks.push(todoField.value);
+button.addEventListener('click', function onAddButtonClick(event) {
+    var inputValue = input.value;
+    var inputValueWithoutWhiteSpase = inputValue.trim();
+    if (inputValueWithoutWhiteSpase != "") {
+        tasks.push(inputValueWithoutWhiteSpase);
     }
 
-   var printText = document.getElementById("pTag").innerHTML= tasks;
-}
-
+});
